@@ -26,7 +26,7 @@ import javax.sound.sampled.TargetDataLine;
 public class ClientBackEnd implements Runnable {
     
     private volatile boolean running;
-    private final String ip = "68.172.233.201";
+    private final String ip = "localhost";
     private final int port = 25564;
     private ObjectInputStream in;
     private ObjectOutputStream out;
