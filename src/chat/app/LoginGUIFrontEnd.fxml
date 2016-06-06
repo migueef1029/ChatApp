@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="background" fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.app.LoginGUIFrontEndController">
+    <stylesheets>
+        <URL value="@loginguifrontend.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="account" layoutX="137.0" layoutY="135.0" prefHeight="22.0" prefWidth="326.0" promptText="Account Name" />
+      <PasswordField fx:id="password" layoutX="137.0" layoutY="165.0" onKeyPressed="#handlePassword" prefHeight="22.0" prefWidth="326.0" promptText="Password" />
+      <Button layoutX="137.0" layoutY="200.0" mnemonicParsing="false" onMousePressed="#handleLogin" prefHeight="22.0" prefWidth="326.0" styleClass="buttons" text="Login" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="registerButton" layoutX="137.0" layoutY="230.0" mnemonicParsing="false" onMouseReleased="#handleRegister" prefHeight="22.0" prefWidth="326.0" styleClass="buttons" text="Register" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="errorLabel" layoutX="137.0" layoutY="88.0" prefHeight="39.0" prefWidth="326.0" textFill="#e40f0f">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

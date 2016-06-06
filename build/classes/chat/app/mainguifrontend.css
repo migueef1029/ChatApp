@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    
+}
+
+#sidePanel {
+    -fx-background-color: gray;
+}
+
+.blueFont {
+    -fx-text-fill: #3399FF;
+}
+
+.blackFont {
+    -fx-text-fill: black;
+}
+
+.whiteBackground {
+    -fx-background-color: #d9d9d9;
+}

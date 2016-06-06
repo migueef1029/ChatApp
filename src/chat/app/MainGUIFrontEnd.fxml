@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.app.MainGUIFrontEndController">
+    <stylesheets>
+        <URL value="@mainguifrontend.css" />
+    </stylesheets>
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutY="143.0" prefHeight="469.0" prefWidth="221.0">
+         <content>
+            <VBox fx:id="vbox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="472.0" prefWidth="220.0" />
+         </content></ScrollPane>
+      <TextField fx:id="searchField" layoutY="97.0" onKeyPressed="#handleSearch" prefHeight="22.0" prefWidth="221.0" promptText="Search" />
+      <Label fx:id="usersName" layoutX="27.0" layoutY="29.0" prefHeight="41.0" prefWidth="167.0" text="User">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <BorderPane id="sidePanel" fx:id="borderPane" layoutX="221.0" layoutY="-3.0" prefHeight="617.0" prefWidth="582.0">
+         <top>
+            <AnchorPane prefHeight="101.0" prefWidth="582.0" styleClass="whiteBackground" BorderPane.alignment="CENTER">
+               <children>
+                  <Circle fill="#61b5ff" layoutX="490.0" layoutY="51.0" onMouseClicked="#handleCall" radius="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <Circle fill="#61b5ff" layoutX="540.0" layoutY="51.0" onMouseClicked="#handleEnd" radius="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <Label fx:id="infoLabel" layoutX="36.0" layoutY="30.0" prefHeight="41.0" prefWidth="372.0">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="#61b5ff" layoutX="436.0" layoutY="51.0" onMouseClicked="#handleAdd" radius="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <Text layoutX="425.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add" />
+                  <Text layoutX="479.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Call" />
+                  <Text layoutX="529.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End" />
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="chatBox" layoutX="73.0" layoutY="35.0" prefHeight="448.0" prefWidth="447.0" />
+               </children>
+            </AnchorPane>
+         </center></BorderPane>
+      <HBox layoutY="119.0" prefHeight="22.0" prefWidth="221.0">
+         <children>
+            <Label fx:id="contactsLabel" alignment="CENTER" onMousePressed="#handleContacts" prefHeight="33.0" prefWidth="112.0" styleClass="blueFont" text="Contacts">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="recentLabel" alignment="CENTER" onMousePressed="#handleRecent" prefHeight="48.0" prefWidth="112.0" styleClass="blackFont" text="Recent" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

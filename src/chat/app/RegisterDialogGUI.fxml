@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.app.RegisterDialogGUIController">
+    <stylesheets>
+        <URL value="@registerdialoggui.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="subpanel" layoutX="170.0" layoutY="100.0" prefHeight="200.0" prefWidth="260.0">
+         <children>
+            <Label layoutX="26.0" layoutY="89.0" prefHeight="22.0" prefWidth="54.0" text="Password" />
+            <Label layoutX="26.0" layoutY="54.0" prefHeight="22.0" prefWidth="54.0" text="Account" />
+            <TextField fx:id="account" layoutX="91.0" layoutY="54.0" />
+            <PasswordField fx:id="password" layoutX="91.0" layoutY="89.0" onKeyPressed="#handlePasswordEnter" />
+            <Button layoutX="67.0" layoutY="139.0" mnemonicParsing="false" onMouseReleased="#handleRegister" text="Register" />
+            <Button layoutX="151.0" layoutY="139.0" mnemonicParsing="false" onMouseReleased="#handleCancel" text="Cancel" />
+            <Label fx:id="errorLabel" alignment="CENTER" prefHeight="46.0" prefWidth="260.0" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
